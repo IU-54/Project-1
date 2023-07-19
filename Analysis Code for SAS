@@ -23,4 +23,23 @@ out=_____  dbms=xlsx  replace; *dmbs indicates the data type, in this case the f
 sheet="    "; *the name of the excel sheet of interest is written within the quotations*;
 run;
 
+*Overview of imported data- when the code below is run, one is able to see the number of records/observations and variables, and variable format/type*; 
+
+proc contents data=; 
+run;
+
+*Check to see if there are duplicates-if this is an independent data analysis looking at one period in time, duplicates should not be included*; 
+
+proc sort data=;
+by; *the by variable is the record identifier*;
+run;
+
+data ; *assign a name for the data with duplicates*;
+set data;
+by; *the by variable which was sorted before*;
+if first."var in by statement" ne last."var in by statement"; *this is 
+run;
+
+
+
 
