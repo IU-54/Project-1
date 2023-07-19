@@ -1,1 +1,26 @@
+/*
+****Biostatistical Analyst: 
+*Date created:
+*Date last modified:
+*Purpose: The purpose of this program is to run analyses examining weight change*/
+
+libname _____" " /*this is the pathway to let SAS know where to save permanent datasets. The underscore represents the name of the libname and the pathway to the folder
+  is written within the quotations*/
+
+/*Assigning formats*/
+
+proc format; *this code assign formats to label variable responses*;
+   value yn
+        0="No"
+        1="Yes"
+run;
+
+/*Importing the excel data into SAS*/
+
+proc import datafile="" /*
+out=_____  dbms=xlsx  replace; *dmbs indicates the data type, in this case the file is an excel document; out statement indicates the name 
+           one would like to call this dataset when imported into SAS*;
+sheet="    "; *the name of the excel sheet of interest is written within the quotations*;
+run;
+
 
