@@ -6,8 +6,8 @@
   ## 1. Proc sort
      a. Necessary before checking for duplicates
   ## 2. Proc freq
-     b. Reports the frequency and percentages 
+     b. Reports the frequency and percentages for categorical variables
   ## 3. Proc means
      c. Reports statistics for continuous characteristics (i.e., mean, std, median, p25, p75)
   ## 4. Proc logistic
-     d. Reports the odds ratio among groups of interest predicting a binary outcome
+     d. Reports the odds ratio predicting a binary outcome among groups of interest
