@@ -2,7 +2,7 @@
 ****Biostatistical Analyst: 
 *Date created:
 *Date last modified:
-*Purpose: The purpose of this program is to run analyses examining weight change*/
+*Purpose: The purpose of this program is to run descriptive and logistic regression analyses*/
 
 libname _____" " /*this is the pathway to let SAS know where to save permanent datasets. The underscore represents the name of the libname and the pathway to the folder
   is written within the quotations*/
