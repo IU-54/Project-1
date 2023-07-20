@@ -7,9 +7,6 @@
      a. Necessary before checking for duplicates
   ## 2. Proc freq
      b. Reports the frequency and percentages for categorical variables
-
-     #-Categorical Variables 
-     
   ## 3. Proc means
      c. Reports statistics for continuous characteristics (i.e., mean, std, median, p25, p75)
   ## 4. Proc logistic
