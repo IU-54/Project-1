@@ -75,7 +75,7 @@ var;
 class; *group variable*;
 run;
 
-/*If variables were found to be statistically significant in the previous codes, 
+/*If variables are found to be statistically significant in the previous codes, 
 they are included in the logistic regression modeling along with variables that 
 may be considered clinically significant*/
 
