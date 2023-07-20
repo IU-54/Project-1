@@ -62,15 +62,24 @@ run;
 
 /*If one would like to compare characteristics between groups, the above codes will be used but slightly changed*/
 
-*Comparison of two categorical variables along with a Chi-square test*; 
+*Comparison of two categorical variables using a Chi-square test*; 
 
 proc freq data=;
-tables a*b/chisq;
+tables vars*(group variable)/chisq;
 run;
 
-*T-test to compare continuous characteristics between two groups*;
+*T-test to compare continuous characteristics between outcome of interest groups*;
 
 proc ttest data=;
 var;
 class; *group variable*;
+run;
+
+/*If variables were found to be statistically significant in the previous codes, 
+they are included in the logistic regression modeling along with variables that 
+may be considered clinically significant*/
+
+proc logistic data=  desc; *The desc statement lets SAS know that the outcome of interest being predicted is a 1*;
+class categorical variables (ref=); *The ref statement indicates the reference group within each variable*;
+model outcome=predictor variables;
 run;
