@@ -37,9 +37,40 @@ run;
 data ; *assign a name for the data with duplicates*;
 set data;
 by; *the by variable which was sorted before*;
-if first."var in by statement" ne last."var in by statement"; *this is 
+if first."var in by statement" ne last."var in by statement";  
 run;
 
+*Create a new dataset without duplicates*;
 
+proc sort data= nodupkey out=; *the out dataset will have only one record per row*;
+by ;
+run;
 
+/*Descriptive Statistics of overall data*/
 
+*Categorical variables*; 
+
+proc freq data=;
+tables; *variables of interest*;
+run; 
+
+*Continuous variables*; 
+
+proc means data=; 
+var;
+run;
+
+/*If one would like to compare characteristics between groups, the above codes will be used but slightly changed*/
+
+*Comparison of two categorical variables along with a Chi-square test*; 
+
+proc freq data=;
+tables a*b/chisq;
+run;
+
+*T-test to compare continuous characteristics between two groups*;
+
+proc ttest data=;
+var;
+class; *group variable*;
+run;
